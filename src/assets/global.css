@@ -1,0 +1,19 @@
+:root {
+  --bg-color: #1e1e1e;
+  --title-color: #08eb69;
+  --search-color: #e5e5e5;
+  --searchBox-color: #808080;
+  --normalText-color: #fff;
+  --textFixed-color: #08eb69;
+
+  /* for icon  */
+  --icon-color: #e5e5e5;
+  --ratingIcon-color: #eb088a;
+}
+
+.logoTitle {
+  color: var(--textFixed-color);
+  margin-bottom: 100%;
+  position: absolute;
+  bottom: -4.3rem;
+}

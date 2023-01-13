@@ -1,15 +1,21 @@
 <template>
-  <div>
-      <h1>Manga Home Page</h1>
-  </div>
+  <Sliderview></Sliderview>
 </template>
 
 <script>
-export default {
+import Sliderview from "../components/Sliderview.vue";
 
+export default {
+  components: {
+    Sliderview,
+
+  }
 }
 </script>
 
 <style>
-
+  .box{
+    width: 200px;
+    height: 200px;
+  }
 </style>
