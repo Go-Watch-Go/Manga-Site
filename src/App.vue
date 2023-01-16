@@ -2,7 +2,8 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/webtoon">Webtoon</router-link> |
-    <router-link to="/manga">Manga</router-link>
+    <router-link to="/manga">Manga</router-link> |
+    <router-link to="/detail">Detail</router-link>
     
   </nav>
   <router-view/>
