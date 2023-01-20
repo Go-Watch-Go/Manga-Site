@@ -49,6 +49,8 @@ import db from '../firebase/init';
 export default {
  setup(){
   let dat = ref([]);
+
+  
   let load = async()=>{
     let res = await getDoc(doc(db, 'detail','s3PElJbCG0QRs1V9hIxp'))
 
