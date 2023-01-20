@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container-fluid">
       <router-link to="/" class="navbar-brand logoLink">
@@ -29,6 +30,14 @@
         </ul>
       </div>
     </div>   
+=======
+  <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/webtoon">Webtoon</router-link> |
+    <router-link to="/manga">Manga</router-link> |
+    <router-link to="/detail">Detail</router-link>
+    
+>>>>>>> detail_section
   </nav>
   <router-view/>
 </template>

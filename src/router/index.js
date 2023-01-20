@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import WebtoonPage from "../views/WebtoonPage.vue";
 import MangaPage from "../views/MangaPage.vue";
+import DetailPage from "../views/DetailPage.vue";
 
 const routes = [
   {
@@ -19,6 +20,11 @@ const routes = [
     name: "manga",
     component: MangaPage,
   },
+  {
+    path: "/detail",
+    name: "detail",
+    component: DetailPage,
+  }
 ];
 
 const router = createRouter({
