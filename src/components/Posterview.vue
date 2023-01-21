@@ -10,11 +10,13 @@
         <div class="popularcontainers cons">
           <div class="popularcards">
             <!-- Posters -->
-            <div class="bg-info cards" v-for="data in detailArray">
+            <div class="bg-info cards mx-2" v-for="data in detailArray">
               <img :src="data.backdropImg" class="popularimgs" />
                 <div class="popularinfo">
-                  <p class="populartitle">{{ data.title }}</p>
-                  <p class="populargernes">AA</p>
+                  <p class="populartitle py-2">{{ data.title }}</p>
+                  <div class="d-flex">
+                    <p class="populargernes me-2" v-for="gerne in data.genre">{{ gerne }}</p>
+                  </div>
                 </div>
             </div>
           </div>
@@ -57,26 +59,34 @@ section {
 .popular {
   width: 100vw;
   height: 450px;
-  /* background-color: red; */
 
   overflow: hidden;
 }
 
 .popularcontainers {
-  /* background-color: aqua; */
+  width: 96vw;
+  margin: auto;
   padding: 20px 0;
+  /* background-color: red; */
   position: relative;
 
   overflow: hidden;
 }
 
 .popularcards {
-  /* background-color: rebeccapurple; */
-  /* margin-left: 20px; */
-  display: flex;
-  /* width: 1560px; */
+  max-width: 100vw;
+  margin: auto;
+  padding: 10px 0;
+  /* background-color: aqua; */
 
-  transition: all 0.2s;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  /* display: grid;
+  max-width: 100vw;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 2fr)); */
+  /* grid-template-columns: subgrid; */
 }
 
 .cards{
@@ -86,7 +96,7 @@ section {
   border-radius: 15px;
   box-shadow: 0 0 5px #000;
 
-  margin: auto;
+  /* margin:auto; */
 
   position: relative;
 
@@ -97,17 +107,25 @@ section {
   transition: all 0.4s ease;
 }
 
-.popularimgs,
-.movieimgs,
-.animeimgs {
+.cards::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(33, 33, 33, 0), rgba(15, 15, 15, 1));
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: 1;
+}
+
+.popularimgs {
   width: inherit;
   height: inherit;
 }
 
-.popularinfo,
-.movieinfo,
-.animeinfo,
-.lastinfo {
+.popularinfo {
   position: absolute;
   bottom: 0;
   left: 10px;
@@ -117,19 +135,40 @@ section {
   z-index: 2;
 }
 
-.populargernes,
-.moviegernes,
-.animegernes {
+.populargernes {
   font-family: "Varela Round", sans-serif;
   font-size: 12px;
-  color: var(--textFixed-color);
+  /* background-color: red; */
+  color:var(--textFixed-color);
   font-weight: 400px;
 }
 
-.populartitle,
-.movietitle,
-.animetitle {
+.populartitle {
   font-size: 18px;
   margin: 0;
 }
+
+@media (hover: hover) {
+  .cards:hover,
+  .movcards:hover,
+  .anicards:hover,
+  .lastcards:hover,
+  .singleMangaCard:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@media (hover: none) {
+  .cards:hover,
+  .movcards:hover,
+  .anicards:hover,
+  .lastcards:hover {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
 </style>
