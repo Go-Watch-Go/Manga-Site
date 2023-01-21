@@ -8,7 +8,7 @@ import  SummaryInfo  from "../components/SummaryInfo.vue";
 
 </script>
 
-<style>
+<style scoped>
 body{
   background-color: bisque;
 }
