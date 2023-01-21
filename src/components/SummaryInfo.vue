@@ -45,7 +45,7 @@
 <script>
 import {ref} from "vue";
 import {doc, getDoc} from 'firebase/firestore';
-import db from '../firebase/init';
+import {db} from '../firebase/init';
 export default {
  setup(){
   let dat = ref([]);
